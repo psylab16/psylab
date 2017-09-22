@@ -17,9 +17,9 @@
 # You should have received a copy of the GNU General Public License
 # along with Psylab.  If not, see <http://www.gnu.org/licenses/>.
 #
-# Bug reports, bug fixes, suggestions, enhancements, or other 
-# contributions are welcome. Go to http://code.google.com/p/psylab/ 
-# for more information and to contribute. Or send an e-mail to: 
+# Bug reports, bug fixes, suggestions, enhancements, or other
+# contributions are welcome. Go to http://code.google.com/p/psylab/
+# for more information and to contribute. Or send an e-mail to:
 # cbrown1@pitt.edu.
 #
 
@@ -39,7 +39,7 @@ io.listPlayer - Standalone script to play blocks of soundfiles in folders [dep: 
 io.hid - Access human interface devices like joysticks [dep: linux]
 '''
 
-__version__ = '0.4.7.6'
+__version__ = '0.4.7.7'
 
 #from dataview import dataview
 from . import tools
