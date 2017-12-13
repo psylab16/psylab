@@ -43,4 +43,4 @@ from . import stats
 from . import gustav
 
 
-__version__ = '0.4.7.10'
+__version__ = '0.4.7.11'

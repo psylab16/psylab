@@ -1,6 +1,10 @@
-PsyLab - Psychophysics Lab
+[![Build Status](https://travis-ci.org/psylab16/psylab.svg?branch=master)](https://travis-ci.org/psylab16/psylab)
+
+# PsyLab - Psychophysics Lab
 
 Copyright (c) 2010-2012 Christopher A. Brown
+
+## About
 
 Psylab is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -19,9 +23,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 Psylab is a loose collection of modules useful for various aspects of running
 psychophysical experiments, although several might be more generally useful.
 
-Current version: 1.0
-website: http://www.psylab.us
-source code: http://code.google.com/p/psylab
+[Source code](http://code.google.com/p/psylab)
 
 For installation instructions, see INSTALL.
-
