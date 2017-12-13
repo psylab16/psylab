@@ -17,12 +17,11 @@
 # You should have received a copy of the GNU General Public License
 # along with Psylab.  If not, see <http://www.gnu.org/licenses/>.
 #
-# Bug reports, bug fixes, suggestions, enhancements, or other 
-# contributions are welcome. Go to http://code.google.com/p/psylab/ 
-# for more information and to contribute. Or send an e-mail to: 
+# Bug reports, bug fixes, suggestions, enhancements, or other
+# contributions are welcome. Go to http://code.google.com/p/psylab/
+# for more information and to contribute. Or send an e-mail to:
 # cbrown1@pitt.edu.
 #
-
 '''
 PsyLab - Psychophysics Lab
 
@@ -38,11 +37,10 @@ io.audio: Perform tasks related to file i/o [dep: medussa]
 io.listPlayer - Standalone script to play blocks of soundfiles in folders [dep: medussa]
 io.hid - Access human interface devices like joysticks [dep: linux]
 '''
-
-__version__ = '0.4.7.8'
-
-#from dataview import dataview
 from . import tools
 from . import signal
 from . import stats
 from . import gustav
+
+
+__version__ = '0.4.7.8'

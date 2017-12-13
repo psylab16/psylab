@@ -17,22 +17,37 @@
 # You should have received a copy of the GNU General Public License
 # along with Psylab.  If not, see <http://www.gnu.org/licenses/>.
 #
-# Bug reports, bug fixes, suggestions, enhancements, or other 
-# contributions are welcome. Go to http://code.google.com/p/psylab/ 
-# for more information and to contribute. Or send an e-mail to: 
+# Bug reports, bug fixes, suggestions, enhancements, or other
+# contributions are welcome. Go to http://code.google.com/p/psylab/
+# for more information and to contribute. Or send an e-mail to:
 # cbrown1@pitt.edu.
 #
-
-#from distutils.core import setup
 from distutils.sysconfig import get_python_lib
 from setuptools import setup
-import sys, os
-import psylab
-version = psylab.__version__
+import sys
+import os
 
-package_dir = { 'psylab': 'psylab', 
+
+def read_version():
+    init_file = os.path.join(os.path.dirname(__file__), 'psylab', '__init__.py')
+    with open(init_file, 'r') as init:
+        init_lines = init.readlines()
+    version = None
+    for line in init_lines:
+        if '__version__' in line:
+            version = line.strip().split('=')[-1]
+            version = version.replace(" ", "")
+            version = version.replace("'", "")
+            break
+    if version is None:
+        raise RuntimeError("Unable to find version string.")
+    return version
+
+
+package_dir = {'psylab': 'psylab',
               }
-package_data = {'psylab': [ 'subject_manager/*.ui',
+
+package_data = {'psylab': ['subject_manager/*.ui',
                             'subject_manager/*.sql',
                             'subject_manager/images/*.*',
                             'misc/*.csl',
@@ -41,7 +56,7 @@ package_data = {'psylab': [ 'subject_manager/*.ui',
 
 requires = ['numpy (>=1.2)',
             'scipy (>=0.12)',
-            'matplotlit (>=1.2)',
+            'matplotlib (>=1.2)',
             ]
 
 packages = ['psylab%s' % (p) for p in ['',
@@ -56,16 +71,9 @@ packages = ['psylab%s' % (p) for p in ['',
                                     '.subject_manager',
                                     ]
             ]
-#packages.append('psylab_examples')
-
-requires=[
-'numpy (>=1.2)',
-'scipy (>=0.12)',
-'matplotlib (>=1.1)',
-]
 
 setup(name='PsyLab',
-      version=version,
+      version=read_version(),
       description='PsyLab: Psychophysics Lab',
       long_description='''\
  Psylab is a loose collection of modules useful for various aspects of running
@@ -75,12 +83,12 @@ setup(name='PsyLab',
       maintainer='Christopher Brown',
       maintainer_email='cbrown1@pitt.edu',
       url='http://www.psylab.us',
-      packages = packages,
-      package_dir = package_dir,
-      package_data = package_data,
-      requires = requires,
-      platforms = ['any'],
-      classifiers = [
+      packages=packages,
+      package_dir=package_dir,
+      package_data=package_data,
+      requires=requires,
+      platforms=['any'],
+      classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Science/Research',
         'License :: OSI Approved :: GNU General Public License (GPL)',
