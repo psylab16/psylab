@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Copyright (c) 2010-2014 Christopher Brown
+# Copyright (c) 2010-2018 Christopher Brown
 #
 # This file is part of Psylab.
 #
@@ -43,4 +43,4 @@ from . import stats
 from . import gustav
 
 
-__version__ = '0.4.7.11'
+__version__ = '0.5.0.0'
