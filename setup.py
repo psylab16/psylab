@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Copyright (c) 2010-2014 Christopher Brown
+# Copyright (c) 2010-2018 Christopher Brown
 #
 # This file is part of Psylab.
 #
@@ -44,15 +44,7 @@ def read_version():
     return version
 
 
-package_dir = {'psylab': 'psylab',
-              }
-
-package_data = {'psylab': ['subject_manager/*.ui',
-                            'subject_manager/*.sql',
-                            'subject_manager/images/*.*',
-                            'misc/*.csl',
-                          ],
-                }
+package_dir = {'psylab': 'psylab'}
 
 requires = ['numpy (>=1.2)',
             'scipy (>=0.12)',
@@ -60,16 +52,11 @@ requires = ['numpy (>=1.2)',
             ]
 
 packages = ['psylab%s' % (p) for p in ['',
-                                    '.io',
-                                    '.dataview',
-                                    '.gustav',
-                                    '.gustav.methods',
-                                    '.gustav.frontends',
-                                    '.tools',
-                                    '.signal',
-                                    '.stats',
-                                    '.subject_manager',
-                                    ]
+                                       '.dataview',
+                                       '.tools',
+                                       '.signal',
+                                       '.stats'
+                                       ]
             ]
 
 setup(name='PsyLab',
@@ -85,23 +72,21 @@ setup(name='PsyLab',
       url='http://www.psylab.us',
       packages=packages,
       package_dir=package_dir,
-      package_data=package_data,
       requires=requires,
       platforms=['any'],
-      classifiers=[
-        'Development Status :: 4 - Beta',
-        'Intended Audience :: Science/Research',
-        'License :: OSI Approved :: GNU General Public License (GPL)',
-        'Natural Language :: English',
-        'Operating System :: OS Independent',
-        'Operating System :: POSIX',
-        'Operating System :: Unix',
-        'Operating System :: Microsoft :: Windows',
-        'Operating System :: MacOS',
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3.3',
-        'Topic :: Multimedia :: Sound/Audio :: Speech',
-        'Topic :: Multimedia :: Sound/Audio :: Analysis',
-        'Topic :: Scientific/Engineering',
-        ],
-     )
+      classifiers=['Development Status :: 4 - Beta',
+                   'Intended Audience :: Science/Research',
+                   'License :: OSI Approved :: GNU General Public License (GPL)',
+                   'Natural Language :: English',
+                   'Operating System :: OS Independent',
+                   'Operating System :: POSIX',
+                   'Operating System :: Unix',
+                   'Operating System :: Microsoft :: Windows',
+                   'Operating System :: MacOS',
+                   'Programming Language :: Python :: 2.7',
+                   'Programming Language :: Python :: 3.3',
+                   'Topic :: Multimedia :: Sound/Audio :: Speech',
+                   'Topic :: Multimedia :: Sound/Audio :: Analysis',
+                   'Topic :: Scientific/Engineering',
+                   ],
+      )
