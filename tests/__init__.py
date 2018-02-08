@@ -29,18 +29,5 @@ A loose collection of modules useful for various aspects of running
 psychophysical experiments, although several might be more generally
 useful.
 
-In addition to the modules that are imported automatically, others include:
-
-subject_manager: Manage subjects with a useful user interface [dep: pyqt]
-io.tdt2: Access Tucker Davis System II hardware via serial port dep: pyserial]
-io.audio: Perform tasks related to file i/o [dep: medussa]
-io.listPlayer - Standalone script to play blocks of soundfiles in folders [dep: medussa]
-io.hid - Access human interface devices like joysticks [dep: linux]
+Test module using pytest.
 '''
-from . import tools
-from . import signal
-from . import stats
-from . import gustav
-
-
-__version__ = '0.5.0.2'
