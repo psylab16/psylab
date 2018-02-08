@@ -40,7 +40,6 @@ io.hid - Access human interface devices like joysticks [dep: linux]
 from . import tools
 from . import signal
 from . import stats
-from . import gustav
 
 
-__version__ = '0.5.0.2'
+__version__ = '0.5.0.3'
